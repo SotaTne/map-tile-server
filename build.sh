@@ -9,7 +9,7 @@ docker compose up
 
 # 2. 暗黙的gzipの解凍
 echo "2. 暗黙的gzip圧縮を解凍中..."
-find dist/tiles -type f -name "*.pbf" -exec gzip -d {} \; 2>/dev/null || true
+node ungzip.js
 
 # 3. _headersファイルをコピー
 echo "3. _headersファイルをコピー中..."

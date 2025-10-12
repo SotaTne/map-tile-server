@@ -23,7 +23,7 @@ python transform.py
 ## 3 暗黙的gzipの解消(オプション)
 
 ```bash
-find dist/tiles -type f -name "*.pbf" -exec gzip -d {} \; 2>/dev/null
+node ungzip.js
 ```
 
 ## 4. cloudflare pagesでのデプロイのために_headersファイルの配置(オプション)
