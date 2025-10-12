@@ -1,0 +1,6 @@
+services:
+  # Dockerfileを実行する。/distはバインドする 
+  app:
+    build: .
+    volumes:
+      - ./dist:/app/dist
