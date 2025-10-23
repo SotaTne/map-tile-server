@@ -1119,8 +1119,10 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "scheme": "xyz",
-      "url": ""
+      "tiles": [
+        "https://map-tile-server.pages.dev/tiles/{z}/{x}/{y}.pbf"
+      ],
+      "attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, © <a href=\"https://openmaptiles.org/\">OpenMapTiles</a>"
     }
   },
   "version": 8,
