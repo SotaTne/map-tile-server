@@ -11,9 +11,8 @@ input.layers = input.layers.filter((layer) => layer.type !== "symbol");
 input.sources = {
   openmaptiles: {
     type: "vector",
-    tiles: ["https://map-tile-server.pages.dev/tiles/{z}/{x}/{y}.pbf"],
-    attribution:
-      '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, © <a href="https://openmaptiles.org/">OpenMapTiles</a>',
+    scheme: "xyz",
+    url: "https://map-tile-server.pages.dev/tiles/metadata.json"
   },
 },
 

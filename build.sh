@@ -15,11 +15,19 @@ node ungzip.js
 echo "3. _headersファイルをコピー中..."
 cp _headers dist/
 
-# 4. style.jsonをコピー
+# 4. style.jsonを変換してコピー
 echo "4. style.jsonを変換してコピー中..."
 node transform_style.js
 cp style.no-glyphs.json dist/style.json
 
+# 5. metadata.jsonのコピー
+echo "5. metadata.jsonをコピー中..."
+cp dist/tiles/metadata.json .
+
+# 6. metadata.jsonを変換
+echo "6. metadata.jsonを変換中..."
+node transform_metadata.js
+cp metadata.add-tiles.json dist/tiles/metadata.json
 
 echo "=== 準備完了 ==="
 echo "dist/ディレクトリの内容をCloudflare Pagesにデプロイできます"
